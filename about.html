@@ -2,17 +2,77 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css?v=7"/>
+		<style>
+			body {
+				padding: 60px 80px;
+				max-width: 900px;
+				margin: 0 auto;
+				line-height: 1.8;
+			}
+			h1 {
+				font-size: 36px;
+				margin-bottom: 40px;
+				text-align: center;
+				border-bottom: 2px solid #e8e8e8;
+				padding-bottom: 30px;
+			}
+			p {
+				margin-bottom: 25px;
+				text-align: justify;
+			}
+			a {
+				color: #4169e1;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				transition: border-bottom 0.3s ease;
+			}
+			a:hover {
+				border-bottom: 1px solid #4169e1;
+			}
+			.home-link {
+				display: inline-block;
+				margin-bottom: 40px;
+				color: #666;
+				text-transform: uppercase;
+				font-size: 14px;
+				letter-spacing: 1px;
+			}
+			@media only screen and (max-width: 768px) {
+				body {
+					padding: 40px 20px;
+				}
+				h1 {
+					font-size: 28px;
+				}
+			}
+		</style>
 	</head>
 
 	<body>
-		<A HREF="index.html" id="about">Home Page</A><br><br><br>
+		<a href="index.html" class="home-link">← Home Page</a>
 
-		This project aims to provide users with a means to access news stories from sources on both sides of the political spectrum. In doing so, it hopes to pop the <a href="https://www.techopedia.com/definition/28556/filter-bubble"> filter bubbles</a> we exist in, "a state of intellectual isolation that can result from personalized searches when a website algorithm selectively guesses what information a user would like to see". It is designed to make users more aware of the way in which facts are presented and potentially influenced by the author's political views by offering a side-by-side comparison of how any topic of the user's choosing is presented in liberal and conservative news sources (the former colored in blue and the latter, red), and from there make a more informed decision on what he or she chooses to believe. Drawing inspiration from the Wall Street Journal's <a href="http://graphics.wsj.com/blue-feed-red-feed/">Blue Feed, Red Feed</a>, which aims to dispel the echo chambers social networking sites create through interactions with like-minded people that tend to reinforce our existing worldviews, this site hopes to provide a platform to explore views different from one's own. <br><br>
+		<h1>About this site</h1>
 
-The comparative news feed site draws from the New York Times API and News API (with the news source parameter filtered to only include Fox News). The creator of this site had particular difficulty with splitting the webpage in halves to show both news headlines, which she thinks is an apt metaphor for one's difficulty in splitting one's worldview. This <a href= "https://www.youtube.com/watch?v=oRmQN244Ir0"> youtube link </a> helped. <br><br>
+		<p>This project aims to provide users with a means to access news stories from sources on both sides of the political spectrum. In doing so, it hopes to pop the <a href="https://www.techopedia.com/definition/28556/filter-bubble">filter bubbles</a> we exist in, "a state of intellectual isolation that can result from personalized searches when a website algorithm selectively guesses what information a user would like to see".</p>
 
-This site hopes to expand by offering more news sources on either side of the spectrum.
+		<p>It is designed to make users more aware of the way in which facts are presented and potentially influenced by the author's political views by offering a side-by-side comparison of how any topic of the user's choosing is presented in liberal and conservative news sources, and from there make a more informed decision on what he or she chooses to believe.</p>
+
+		<p>Drawing inspiration from the Wall Street Journal's <a href="http://graphics.wsj.com/blue-feed-red-feed/">Blue Feed, Red Feed</a>, which aims to dispel the echo chambers social networking sites create through interactions with like-minded people that tend to reinforce our existing worldviews, this site hopes to provide a platform to explore views different from one's own.</p>
+
+		<p>The comparative news feed site draws from the New York Times API and RSS feeds from Fox News. The search suggestions are dynamically generated based on the most common topics in today's news coverage, automatically updating as news cycles change.</p>
+
+		<p>The creator of this site had particular difficulty with splitting the webpage in halves to show both news headlines, which she thinks is an apt metaphor for one's difficulty in splitting one's worldview. This <a href="https://www.youtube.com/watch?v=oRmQN244Ir0">youtube tutorial</a> helped.</p>
+
+		<p>This site hopes to expand by offering more news sources on either side of the spectrum.</p>
+
+		<hr style="margin: 50px 0; border: none; border-top: 1px solid #e8e8e8;">
+
+		<p style="font-size: 15px; color: #666;">This project was originally created for the NYU Abu Dhabi Mashups Class in 2018, and has been reimagined and redesigned in 2026 with modern editorial styling and improved functionality.</p>
+
+		<p style="text-align: center; margin-top: 40px; font-size: 14px; color: #999; letter-spacing: 0.5px;">
+			A PROJECT BY <strong style="color: #666;">ALYSSA YU</strong>
+		</p>
 
 	</body>
 </html>
