@@ -174,7 +174,7 @@ function generateSuggestions() {
 
 				// Generate pills
 				$('.suggestions').empty();
-				$('.suggestions').append('<span class="suggestion-label">Try searching <span style="font-weight: 400;">(popular topics today)</span>:</span>');
+				$('.suggestions').append('<span class="suggestion-label">Try searching <span style="font-weight: 400;">(popular keywords today)</span>:</span>');
 
 				suggestions.forEach(function(term) {
 					var pill = $('<button class="suggestion-pill" data-term="' + term + '">' +
