@@ -30,36 +30,39 @@ if(result.response && result.response.docs && result.response.docs.length > 0) {
 }	
 
 function getFoxArticles(input) {
-		//FOX API 
-	var url = 'https://newsapi.org/v2/everything?' +
-          'q=' + input + '&' +
-          //'from=2018-10-01&' +
-          'sortBy=popularity&' +
-          'sources=fox-news&' +
-          'apiKey=74c66a35ffaa45ec95dc8060fd17efd2';
+	// Using RSS2JSON free tier to parse Fox News RSS feed (no API key needed for basic usage)
+	var rssUrl = encodeURIComponent('https://moxie.foxnews.com/google-publisher/latest.xml');
+	var url = 'https://api.rss2json.com/v1/api.json?rss_url=' + rssUrl;
 
-
-	var req = new Request(url);
 	$.ajax({
-	  url: url,
-	  method: 'GET',
+		url: url,
+		method: 'GET',
 	}).done(function(result) {
 		console.log('Fox News Response:', result);
-		if(result.articles && result.articles.length > 0) {
-			for(var i = 0; i < Math.min(10, result.articles.length); i++){
-				var url = result.articles[i]['url'];
-				var title = result.articles[i]['title'];
-				$(".right").append('<a class="result" href="' + url + '" target="_blank">' + title + '</a>');
+		if(result.status === 'ok' && result.items && result.items.length > 0) {
+			// Filter articles by search term
+			var filtered = result.items.filter(function(item) {
+				var searchLower = input.toLowerCase();
+				return item.title.toLowerCase().includes(searchLower) ||
+				       (item.description && item.description.toLowerCase().includes(searchLower));
+			});
+
+			if(filtered.length > 0) {
+				for(var i = 0; i < Math.min(10, filtered.length); i++){
+					var articleUrl = filtered[i]['link'];
+					var title = filtered[i]['title'];
+					$(".right").append('<a class="result" href="' + articleUrl + '" target="_blank">' + title + '</a>');
+				}
+			} else {
+				$(".right").append('<p>No Fox News articles found for "' + input + '"</p>');
 			}
 		} else {
 			$(".right").append('<p>No Fox News articles found</p>');
 		}
 	}).fail(function(err) {
 		console.error('Fox News Error:', err);
-		$(".right").append('<p>Error loading Fox News articles</p>');
+		$(".right").append('<p>Error loading Fox News articles. Try again later.</p>');
 	});
-
-
 };
 
 
