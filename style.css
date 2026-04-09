@@ -1,0 +1,148 @@
+html{
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: 'Baskerville', 'Playfair Display', sans-serif;
+	font-size: 18px;
+	text-align: center;
+}
+
+h1{
+	margin-top: 30px;
+}
+
+
+
+a{
+	color:black;
+	
+}
+
+a:hover{
+	box-shadow: 0 4px 7px rgba(0,0,0,0.3);
+	top: -2px;
+}
+
+#searchTerm{
+	width: 30%;
+	text-align: center;
+	margin: 5px auto;
+}
+
+#wrap{
+	display: flex;
+	width: 90%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.logo-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	margin: 40px auto;
+	max-width: 900px;
+}
+
+.nytlogos{
+	flex: 1;
+	text-align: right;
+}
+
+.foxlogos{
+	flex: 1;
+	text-align: left;
+}
+
+#nytlogo, #foxlogo{
+	height: 150px;
+	width: auto;
+}
+
+#ib{
+	text-align: center;
+	margin: 40px auto;
+	width: 100%;
+	clear: both;
+}
+
+.left{
+	width:50%;
+	height:100%;
+	float:left;
+	
+}
+
+.left a{
+	display: block;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 8px;
+	margin: 6.5px;
+	box-shadow: 0 1.4px 3px rgba(0,0,0,0.25);
+	transition: 0.3s all;
+	position: relative;
+	color:white;
+	background-color: #394bef;
+}
+
+.left a:hover{
+	background-color: #3141d6;
+}
+
+.right{
+	width:50%;
+	height:100%;
+	float:right;
+}
+
+.right a{
+	display: block;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 8px;
+	margin: 6.5px;
+	box-shadow: 0 1.4px 3px rgba(0,0,0,0.25);
+	transition: 0.3s all;
+	position: relative;
+	color:white;
+	background-color: #ed3b44;
+}
+
+.right a:hover{
+	background-color: #cc2e49;
+}
+
+.about a{ 
+ }
+
+
+input{
+	font-size: 24px;
+	line-height: 30px;
+	height: 30px;
+	align-items: center;
+	width: 50%
+
+}
+
+.form{
+	margin: 30px auto;
+}
+
+button{
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	height: 40px;
+	width: 120px;
+	margin-top: 10px;
+	border: 2px none;
+	border-radius: 10px;
+}
+
+button:hover{
+	background-color: rgb(76, 126, 242);
+	color: white;
+}

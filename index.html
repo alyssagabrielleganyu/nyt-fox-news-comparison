@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
+		<title>Headlines</title>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css?v=3"/>
+		<A HREF= "about.html"> About this site </A>
+	</head>
+	
+	<body>
+
+	<h1> Headlines brought to you by: </h1>
+	<div class="logo-container">
+		<div class="nytlogos">
+			<img src="nyt.png" id="nytlogo">
+		</div>
+		<div class="foxlogos">
+			<img src="foxnews.png" id="foxlogo">
+		</div>
+	</div>
+	<div>
+	<h2 id="ib">... and implicit bias </h2>
+	</div>
+	<div class='form'>
+	<input type="centras" id="searchInput" type="text" placeholder="Search articles here" align="center" >
+	<button class="aButton" id="search" data-apiTerm="cars">ENTER</button>
+	</div>
+
+		<div>
+		<h1 id="searchTerm"></h1>
+		<div id="resultsTarget">
+			<p id="resultParagraph">
+			</p>
+		</div>
+		</div>
+		<div id="wrap">
+			<div class="left"> </div>
+
+			<div class="right"> </div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="scripts.js?v=3"></script>
+	</body>
+</html>
