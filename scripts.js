@@ -44,11 +44,19 @@ function getFoxArticles(input) {
 	  url: url,
 	  method: 'GET',
 	}).done(function(result) {
-		for(var i = 0; i < Math.min(10, result.articles.length); i++){
-			var url = result.articles[i]['url'];
-			var title = result.articles[i]['title'];
-			$(".right").append('<a class="result" href="' + url + '" target="_blank">' + title + '</a>');
+		console.log('Fox News Response:', result);
+		if(result.articles && result.articles.length > 0) {
+			for(var i = 0; i < Math.min(10, result.articles.length); i++){
+				var url = result.articles[i]['url'];
+				var title = result.articles[i]['title'];
+				$(".right").append('<a class="result" href="' + url + '" target="_blank">' + title + '</a>');
+			}
+		} else {
+			$(".right").append('<p>No Fox News articles found</p>');
 		}
+	}).fail(function(err) {
+		console.error('Fox News Error:', err);
+		$(".right").append('<p>Error loading Fox News articles</p>');
 	});
 
 
